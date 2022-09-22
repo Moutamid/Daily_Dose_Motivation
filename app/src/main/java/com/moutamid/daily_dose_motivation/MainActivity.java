@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         privacy_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://app.getterms.io/view/SPfNE/privacy/en-us"));
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://docs.google.com/document/d/e/2PACX-1vTranMDFX4P5vprEhmG8NewJ1E8kHA4qQndzbMtMf6tENW9_2poCkOBWCSuRhJV8e0MW51dwCPGMoxx/pub"));
                 startActivity(browserIntent);
             }
         });
@@ -180,6 +180,7 @@ public class MainActivity extends AppCompatActivity {
             txt_motivation.setText("“Life can be much broader once you discover one simple fact: Everything around you that you call life was made up by people that were no smarter than you. And you can change it, you can influence it… Once you learn that, you'll never be the same again.” —Steve Jobs");
         }
     }
+
     @Override
     protected void onResume() {
         super.onResume();

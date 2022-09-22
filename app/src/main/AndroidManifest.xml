@@ -20,11 +20,13 @@
         android:theme="@style/Theme.Daily_Dose_Motivation"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".DonateActivity"
             android:exported="false" />
-
         <activity
-            android:name=".MainActivity"
+            android:name=".Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
