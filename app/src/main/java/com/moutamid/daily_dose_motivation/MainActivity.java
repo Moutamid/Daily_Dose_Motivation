@@ -21,8 +21,6 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText name;
-    ImageView editName , doneName ;
     TextView date;
     TextView date_proper;
     TextView txt_motivation;
@@ -34,9 +32,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        name = findViewById(R.id.edit1);
-        editName = findViewById(R.id.btn_editName);
-        doneName = findViewById(R.id.btn_doneName);
         date = findViewById(R.id.date);
         date_proper = findViewById(R.id.date_proper);
         txt_motivation = findViewById(R.id.txt_motivation);
@@ -44,23 +39,6 @@ public class MainActivity extends AppCompatActivity {
         thumbs = findViewById(R.id.btn_thumbs);
         privacy_text = findViewById(R.id.privacy_policy);
 
-        editName.setVisibility(View.VISIBLE);
-        editName.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                name.setEnabled(true);
-                editName.setVisibility(View.GONE);
-                doneName.setVisibility(View.VISIBLE);
-            }
-        });
-        doneName.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                name.setEnabled(false);
-                editName.setVisibility(View.VISIBLE);
-                doneName.setVisibility(View.GONE);
-            }
-        });
 
         privacy_text.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -179,22 +157,5 @@ public class MainActivity extends AppCompatActivity {
         else if (motivation == 31){
             txt_motivation.setText("“Life can be much broader once you discover one simple fact: Everything around you that you call life was made up by people that were no smarter than you. And you can change it, you can influence it… Once you learn that, you'll never be the same again.” —Steve Jobs");
         }
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        SharedPreferences sh = getSharedPreferences("MySharedPref", MODE_PRIVATE);
-        String s1 = sh.getString("name", "");
-        name.setText(s1);
-        name.setEnabled(false);
-    }
-    @Override
-    protected void onPause() {
-        super.onPause();
-        SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE);
-        SharedPreferences.Editor myEdit = sharedPreferences.edit();
-        myEdit.putString("name", name.getText().toString());
-        myEdit.apply();
     }
 }

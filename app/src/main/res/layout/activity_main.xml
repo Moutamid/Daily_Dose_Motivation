@@ -7,61 +7,12 @@
     android:background="@color/white"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/layout_name"
+    <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/purple_700"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="Welcome "
-            android:gravity="right"
-            android:layout_weight="1"
-            android:textColor="@color/white"
-            android:textSize="24sp" />
-
-        <EditText
-            android:id="@+id/edit1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textview"
-            android:hint="UserName"
-            android:layout_weight="1"
-            android:gravity="left"
-            android:inputType="textPersonName"
-            android:textColorHint="#A7A6AA"
-            android:padding="10dp"
-            android:maxLength="7"
-            android:maxLines="1"
-            android:textSize="24sp"
-            android:enabled="true"
-            android:textColor="@color/white" />
-
-        <ImageView
-            android:id="@+id/btn_editName"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:visibility="gone"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:src="@drawable/ic_baseline_edit_24"
-            android:layout_gravity="center"/>
-
-        <ImageView
-            android:id="@+id/btn_doneName"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:visibility="gone"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:src="@drawable/ic_baseline_check_circle_24"
-            android:layout_gravity="center"/>
-    </LinearLayout>
+        android:id="@+id/layout_name"
+        app:title="Daily Dose Motivation"
+        android:background="@color/purple_700"/>
 
     <ScrollView
         android:layout_width="match_parent"
